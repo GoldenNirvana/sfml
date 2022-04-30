@@ -17,8 +17,15 @@ public:
   void setSprite(const sf::Sprite &sprite);
   const sf::Texture &getTexture() const;
   void setTexture(const sf::Texture &texture);
+  void setColor(const sf::Color &color);
+  int getPositionInRect() const;
+  void setPositionInRect(int positionInRect);
+  void setTextureRect(const sf::IntRect &intRect);
+  void setTextureRect(int xPos);
+  bool isClicked(const sf::Window &window);
 
 private:
+  int positionInRect_;
   sf::Sprite sprite_;
   sf::Texture texture_;
 };

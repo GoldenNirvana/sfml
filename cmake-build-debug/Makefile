@@ -152,6 +152,30 @@ Button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Button.cpp.s
 .PHONY : Button.cpp.s
 
+Scroll.obj: Scroll.cpp.obj
+.PHONY : Scroll.obj
+
+# target to build an object file
+Scroll.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Scroll.cpp.obj
+.PHONY : Scroll.cpp.obj
+
+Scroll.i: Scroll.cpp.i
+.PHONY : Scroll.i
+
+# target to preprocess a source file
+Scroll.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Scroll.cpp.i
+.PHONY : Scroll.cpp.i
+
+Scroll.s: Scroll.cpp.s
+.PHONY : Scroll.s
+
+# target to generate assembly for a file
+Scroll.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Scroll.cpp.s
+.PHONY : Scroll.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -188,6 +212,9 @@ help:
 	@echo ... Button.obj
 	@echo ... Button.i
 	@echo ... Button.s
+	@echo ... Scroll.obj
+	@echo ... Scroll.i
+	@echo ... Scroll.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

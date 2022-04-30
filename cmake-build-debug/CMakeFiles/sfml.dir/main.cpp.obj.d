@@ -256,4 +256,8 @@ CMakeFiles/sfml.dir/main.cpp.obj: D:\Projects\ClionProjects\sfml\main.cpp \
  D:/Programmes/SFML/include/SFML/Audio/SoundFileFactory.inl \
  D:/Programmes/SFML/include/SFML/Audio/SoundFileReader.hpp \
  D:/Programmes/SFML/include/SFML/Audio/SoundFileWriter.hpp \
- D:\Projects\ClionProjects\sfml\Button.hpp
+ d:\programmes\mingw\include\c++\11.2.0\iostream \
+ d:\programmes\mingw\include\c++\11.2.0\istream \
+ d:\programmes\mingw\include\c++\11.2.0\bits\istream.tcc \
+ D:\Projects\ClionProjects\sfml\Button.hpp \
+ D:\Projects\ClionProjects\sfml\Scroll.hpp

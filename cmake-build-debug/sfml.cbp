@@ -90,6 +90,12 @@
 		<Unit filename="D:/Projects/ClionProjects/sfml/Button.hpp">
 			<Option target="sfml"/>
 		</Unit>
+		<Unit filename="D:/Projects/ClionProjects/sfml/Scroll.cpp">
+			<Option target="sfml"/>
+		</Unit>
+		<Unit filename="D:/Projects/ClionProjects/sfml/Scroll.hpp">
+			<Option target="sfml"/>
+		</Unit>
 		<Unit filename="D:/Projects/ClionProjects/sfml/main.cpp">
 			<Option target="sfml"/>
 		</Unit>
