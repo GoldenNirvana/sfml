@@ -90,6 +90,18 @@
 		<Unit filename="D:/Projects/ClionProjects/sfml/Button.hpp">
 			<Option target="sfml"/>
 		</Unit>
+		<Unit filename="D:/Projects/ClionProjects/sfml/Game.cpp">
+			<Option target="sfml"/>
+		</Unit>
+		<Unit filename="D:/Projects/ClionProjects/sfml/Game.hpp">
+			<Option target="sfml"/>
+		</Unit>
+		<Unit filename="D:/Projects/ClionProjects/sfml/GameState.cpp">
+			<Option target="sfml"/>
+		</Unit>
+		<Unit filename="D:/Projects/ClionProjects/sfml/GameState.hpp">
+			<Option target="sfml"/>
+		</Unit>
 		<Unit filename="D:/Projects/ClionProjects/sfml/Scroll.cpp">
 			<Option target="sfml"/>
 		</Unit>

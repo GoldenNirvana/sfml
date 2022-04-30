@@ -152,6 +152,54 @@ Button.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Button.cpp.s
 .PHONY : Button.cpp.s
 
+Game.obj: Game.cpp.obj
+.PHONY : Game.obj
+
+# target to build an object file
+Game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Game.cpp.obj
+.PHONY : Game.cpp.obj
+
+Game.i: Game.cpp.i
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
+GameState.obj: GameState.cpp.obj
+.PHONY : GameState.obj
+
+# target to build an object file
+GameState.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/GameState.cpp.obj
+.PHONY : GameState.cpp.obj
+
+GameState.i: GameState.cpp.i
+.PHONY : GameState.i
+
+# target to preprocess a source file
+GameState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/GameState.cpp.i
+.PHONY : GameState.cpp.i
+
+GameState.s: GameState.cpp.s
+.PHONY : GameState.s
+
+# target to generate assembly for a file
+GameState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/GameState.cpp.s
+.PHONY : GameState.cpp.s
+
 Scroll.obj: Scroll.cpp.obj
 .PHONY : Scroll.obj
 
@@ -212,6 +260,12 @@ help:
 	@echo ... Button.obj
 	@echo ... Button.i
 	@echo ... Button.s
+	@echo ... Game.obj
+	@echo ... Game.i
+	@echo ... Game.s
+	@echo ... GameState.obj
+	@echo ... GameState.i
+	@echo ... GameState.s
 	@echo ... Scroll.obj
 	@echo ... Scroll.i
 	@echo ... Scroll.s

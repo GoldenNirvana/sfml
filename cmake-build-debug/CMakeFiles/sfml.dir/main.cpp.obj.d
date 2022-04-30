@@ -1,18 +1,11 @@
 CMakeFiles/sfml.dir/main.cpp.obj: D:\Projects\ClionProjects\sfml\main.cpp \
- D:/Programmes/SFML/include/SFML/Graphics.hpp \
- D:/Programmes/SFML/include/SFML/Window.hpp \
- D:/Programmes/SFML/include/SFML/System.hpp \
- D:/Programmes/SFML/include/SFML/Config.hpp \
- D:/Programmes/SFML/include/SFML/System/Clock.hpp \
- D:/Programmes/SFML/include/SFML/System/Export.hpp \
- D:/Programmes/SFML/include/SFML/System/Time.hpp \
- D:/Programmes/SFML/include/SFML/System/Err.hpp \
- d:\programmes\mingw\include\c++\11.2.0\ostream \
- d:\programmes\mingw\include\c++\11.2.0\ios \
- d:\programmes\mingw\include\c++\11.2.0\iosfwd \
+ d:\programmes\mingw\include\c++\11.2.0\iostream \
  d:\programmes\mingw\include\c++\11.2.0\x86_64-w64-mingw32\bits\c++config.h \
  d:\programmes\mingw\include\c++\11.2.0\x86_64-w64-mingw32\bits\os_defines.h \
  d:\programmes\mingw\include\c++\11.2.0\x86_64-w64-mingw32\bits\cpu_defines.h \
+ d:\programmes\mingw\include\c++\11.2.0\ostream \
+ d:\programmes\mingw\include\c++\11.2.0\ios \
+ d:\programmes\mingw\include\c++\11.2.0\iosfwd \
  d:\programmes\mingw\include\c++\11.2.0\bits\stringfwd.h \
  d:\programmes\mingw\include\c++\11.2.0\bits\memoryfwd.h \
  d:\programmes\mingw\include\c++\11.2.0\bits\postypes.h \
@@ -136,6 +129,18 @@ CMakeFiles/sfml.dir/main.cpp.obj: D:\Projects\ClionProjects\sfml\main.cpp \
  d:\programmes\mingw\include\c++\11.2.0\bits\locale_facets.tcc \
  d:\programmes\mingw\include\c++\11.2.0\bits\basic_ios.tcc \
  d:\programmes\mingw\include\c++\11.2.0\bits\ostream.tcc \
+ d:\programmes\mingw\include\c++\11.2.0\istream \
+ d:\programmes\mingw\include\c++\11.2.0\bits\istream.tcc \
+ D:\Projects\ClionProjects\sfml\Game.hpp \
+ D:\Projects\ClionProjects\sfml\Scroll.hpp \
+ D:/Programmes/SFML/include/SFML/Graphics.hpp \
+ D:/Programmes/SFML/include/SFML/Window.hpp \
+ D:/Programmes/SFML/include/SFML/System.hpp \
+ D:/Programmes/SFML/include/SFML/Config.hpp \
+ D:/Programmes/SFML/include/SFML/System/Clock.hpp \
+ D:/Programmes/SFML/include/SFML/System/Export.hpp \
+ D:/Programmes/SFML/include/SFML/System/Time.hpp \
+ D:/Programmes/SFML/include/SFML/System/Err.hpp \
  D:/Programmes/SFML/include/SFML/System/FileInputStream.hpp \
  D:/Programmes/SFML/include/SFML/System/InputStream.hpp \
  D:/Programmes/SFML/include/SFML/System/NonCopyable.hpp \
@@ -236,28 +241,5 @@ CMakeFiles/sfml.dir/main.cpp.obj: D:\Projects\ClionProjects\sfml\main.cpp \
  D:/Programmes/SFML/include/SFML/Graphics/Sprite.hpp \
  D:/Programmes/SFML/include/SFML/Graphics/Text.hpp \
  D:/Programmes/SFML/include/SFML/Graphics/VertexBuffer.hpp \
- D:/Programmes/SFML/include/SFML/Audio.hpp \
- D:/Programmes/SFML/include/SFML/Audio/InputSoundFile.hpp \
- D:/Programmes/SFML/include/SFML/Audio/Export.hpp \
- D:/Programmes/SFML/include/SFML/Audio/Listener.hpp \
- D:/Programmes/SFML/include/SFML/Audio/Music.hpp \
- D:/Programmes/SFML/include/SFML/Audio/SoundStream.hpp \
- D:/Programmes/SFML/include/SFML/Audio/SoundSource.hpp \
- D:/Programmes/SFML/include/SFML/Audio/AlResource.hpp \
- D:/Programmes/SFML/include/SFML/Audio/OutputSoundFile.hpp \
- D:/Programmes/SFML/include/SFML/Audio/Sound.hpp \
- D:/Programmes/SFML/include/SFML/Audio/SoundBuffer.hpp \
- d:\programmes\mingw\include\c++\11.2.0\set \
- d:\programmes\mingw\include\c++\11.2.0\bits\stl_set.h \
- d:\programmes\mingw\include\c++\11.2.0\bits\stl_multiset.h \
- D:/Programmes/SFML/include/SFML/Audio/SoundBufferRecorder.hpp \
- D:/Programmes/SFML/include/SFML/Audio/SoundRecorder.hpp \
- D:/Programmes/SFML/include/SFML/Audio/SoundFileFactory.hpp \
- D:/Programmes/SFML/include/SFML/Audio/SoundFileFactory.inl \
- D:/Programmes/SFML/include/SFML/Audio/SoundFileReader.hpp \
- D:/Programmes/SFML/include/SFML/Audio/SoundFileWriter.hpp \
- d:\programmes\mingw\include\c++\11.2.0\iostream \
- d:\programmes\mingw\include\c++\11.2.0\istream \
- d:\programmes\mingw\include\c++\11.2.0\bits\istream.tcc \
  D:\Projects\ClionProjects\sfml\Button.hpp \
- D:\Projects\ClionProjects\sfml\Scroll.hpp
+ D:\Projects\ClionProjects\sfml\GameState.hpp
