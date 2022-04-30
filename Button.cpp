@@ -4,7 +4,7 @@
 
 Button::Button(std::string str, int xPos, int yPos, int width, int height)
 {
-  texture_.loadFromFile(PATH + "textures/" + str);
+  texture_.loadFromFile("../textures/" + str);
   sprite_.setTextureRect(sf::IntRect(xPos, yPos, width, height));
   sprite_.setTexture(texture_);
   positionInRect_ = xPos;
@@ -76,5 +76,5 @@ bool Button::isClicked(const sf::Window &window)
   sf::IntRect tempRect = sprite_.getTextureRect();
   sf::Vector2f pos = sprite_.getPosition();
   return sf::IntRect(pos.x, pos.y, tempRect.width, tempRect.height).contains(sf::Mouse::getPosition(window))
-  && sf::Mouse::isButtonPressed(sf::Mouse::Left);
+         && sf::Mouse::isButtonPressed(sf::Mouse::Left);
 }

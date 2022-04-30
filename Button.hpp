@@ -4,8 +4,6 @@
 #include <SFML/Graphics.hpp>
 #include <ostream>
 
-const std::string PATH = "D:/Projects/ClionProjects/sfml/";
-
 class Button
 {
 public:

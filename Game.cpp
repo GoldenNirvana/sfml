@@ -14,12 +14,12 @@ const int SCROLL_TIME = 5;
 void Game::play()
 {
   std::srand(std::time(nullptr));
-  RenderWindow window(sf::VideoMode(800, 600), "Joy Casino!");
+  RenderWindow window(sf::VideoMode(800, 600), "Joy Casino!", Style::Titlebar);
 
-  Texture backgroung;
-  backgroung.loadFromFile("D:/Projects/ClionProjects/sfml/src/cas.jpg");
+  Texture background;
+  background.loadFromFile("../src/cas.jpg");
   Sprite back;
-  back.setTexture(backgroung);
+  back.setTexture(background);
   back.setOrigin(300, 100);
 
 
@@ -58,16 +58,15 @@ void Game::play()
       {
         gameState_.doNext();
         clock.restart();
-        buttons[0].setColor(Color::Red);
       }
       if ((buttons[1].isClicked(window) || Keyboard::isKeyPressed(Keyboard::Space)) &&
           gameState_.getState() == GameState::State::Running)
       {
         gameState_.doNext();
         stopGame(scrolls, isWin);
-        buttons[0].setColor(Color::Blue);
       }
-      if (Keyboard::isKeyPressed(Keyboard::W) && gameState_.getState() == GameState::State::Exiting)
+      if ((Keyboard::isKeyPressed(Keyboard::Q) || (Mouse::isButtonPressed(Mouse::Left) && IntRect(270, 350, 230, 68).contains(Mouse::getPosition(window))))
+          && gameState_.getState() == GameState::State::Exiting)
       {
         isWin = false;
         gameState_.doNext();
@@ -80,11 +79,9 @@ void Game::play()
     {
       gameState_.doNext();
       stopGame(scrolls, isWin);
-      buttons[0].setColor(Color::Blue);
     }
 
     // Display
-
     window.clear();
     window.draw(back);
     drawObjects(window, scrolls);
@@ -94,8 +91,10 @@ void Game::play()
       showGameResult(window, isWin);
     }
     window.display();
-    std::cout << gameState_.getState() << '\n';
   }
+
+  scrolls.clear();
+  buttons.clear();
 }
 
 bool Game::checkWin(const std::vector<Scroll> &scrolls)
@@ -112,17 +111,17 @@ bool Game::checkWin(const std::vector<Scroll> &scrolls)
 
 void Game::createScrolls(std::vector<Scroll> &vector)
 {
-  Scroll *scroll1 = new Scroll("titles.png", 100, 100, 300, 100);
-  Scroll *scroll2 = new Scroll("titles.png", 300, 100, 300, 100);
-  Scroll *scroll3 = new Scroll("titles.png", 500, 100, 300, 100);
-  float firstPositionByX = 55.0f;
+  Scroll *scroll1 = new Scroll("../textures/titles.png", 100, 100, 300, 100);
+  Scroll *scroll2 = new Scroll("../textures/titles.png", 300, 100, 300, 100);
+  Scroll *scroll3 = new Scroll("../textures/titles.png", 500, 100, 300, 100);
+  float firstPositionByX = 60.0f;
   vector.push_back(*scroll1);
   vector.push_back(*scroll2);
   vector.push_back(*scroll3);
   for (auto &item: vector)
   {
     item.rotate(-90);
-    item.setPosition(firstPositionByX, 420);
+    item.setPosition(firstPositionByX, 440);
     firstPositionByX += 135;
   }
 }
@@ -133,7 +132,6 @@ void Game::createButtons(std::vector<Button> &vector)
   start_button->setPosition(500, 100);
   Button *stop_button = new Button("button.jpg", 420, 130, 230, 68);
   stop_button->setPosition(500, 400);
-  start_button->setColor(Color::Blue);
   vector.push_back(*start_button);
   vector.push_back(*stop_button);
 }
@@ -172,18 +170,22 @@ void Game::stopGame(std::vector<Scroll> &vector, bool &isWin)
 void Game::showGameResult(sf::RenderWindow &window, bool &isWin)
 {
   Font font;
-  font.loadFromFile("D:/Projects/ClionProjects/sfml/fonts/CyrilicOld.TTF");
+  font.loadFromFile("../fonts/CyrilicOld.TTF");
   Text text("", font, 40);
   text.setFillColor(Color::Black);
   text.setStyle(Text::Bold | Text::Underlined);
 
   Texture winBack;
-  winBack.loadFromFile("D:/Projects/ClionProjects/sfml/src/win.png");
+  winBack.loadFromFile("../src/win.png");
   Sprite winSprite;
   winSprite.setTexture(winBack);
   winSprite.scale(0.5, 0.5);
   winSprite.move(70, 100);
   window.draw(winSprite);
+
+  Button button("button.jpg", 420, 130, 230, 68);
+  button.setPosition(270, 350);
+  window.draw(button.getSprite());
 
   if (!isWin)
   {
