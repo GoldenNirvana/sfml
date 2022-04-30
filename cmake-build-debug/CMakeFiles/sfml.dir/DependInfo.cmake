@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/Projects/ClionProjects/sfml/Button.cpp" "CMakeFiles/sfml.dir/Button.cpp.obj" "gcc" "CMakeFiles/sfml.dir/Button.cpp.obj.d"
   "D:/Projects/ClionProjects/sfml/main.cpp" "CMakeFiles/sfml.dir/main.cpp.obj" "gcc" "CMakeFiles/sfml.dir/main.cpp.obj.d"
   )
 

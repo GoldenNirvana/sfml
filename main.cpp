@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include "Button.hpp"
 
 using namespace sf;
 
@@ -59,6 +60,11 @@ int main()
   button_stop.loadFromFile("D:/Projects/ClionProjects/sfml/src/button.jpg");
   Sprite button_sprite_start;
   Sprite button_sprite_stop;
+
+  Button start_button("button.jpg", 70, 130, 230, 68);
+  start_button.setPosition(500, 100);
+  Button stop_button("button.jpg", 420, 130, 230, 68);
+  stop_button.setPosition(500, 400);
 
   button_sprite_start.setTexture(button_start);
   button_sprite_start.setTextureRect(IntRect(70, 130, 230, 68));
@@ -161,8 +167,10 @@ int main()
     window.draw(sprite);
     window.draw(sprite1);
     window.draw(sprite2);
-    window.draw(button_sprite_start);
-    window.draw(button_sprite_stop);
+    window.draw(start_button.getSprite());
+    window.draw(stop_button.getSprite());
+//    window.draw(button_sprite_start);
+//    window.draw(button_sprite_stop);
     if (isVictory)
     {
       window.draw(winSprite);

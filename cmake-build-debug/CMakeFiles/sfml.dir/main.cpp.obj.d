@@ -255,4 +255,5 @@ CMakeFiles/sfml.dir/main.cpp.obj: D:\Projects\ClionProjects\sfml\main.cpp \
  D:/Programmes/SFML/include/SFML/Audio/SoundFileFactory.hpp \
  D:/Programmes/SFML/include/SFML/Audio/SoundFileFactory.inl \
  D:/Programmes/SFML/include/SFML/Audio/SoundFileReader.hpp \
- D:/Programmes/SFML/include/SFML/Audio/SoundFileWriter.hpp
+ D:/Programmes/SFML/include/SFML/Audio/SoundFileWriter.hpp \
+ D:\Projects\ClionProjects\sfml\Button.hpp

@@ -4,7 +4,7 @@ project(sfml)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc")
 
-add_executable(sfml main.cpp)
+add_executable(sfml main.cpp Button.cpp Button.hpp)
 
 set(SFML_ROOT D:/Programmes/SFML)
 set(SFML_STATIC_LIBRARIES TRUE)

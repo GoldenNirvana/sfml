@@ -128,6 +128,30 @@ sfml/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/build
 .PHONY : sfml/fast
 
+Button.obj: Button.cpp.obj
+.PHONY : Button.obj
+
+# target to build an object file
+Button.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Button.cpp.obj
+.PHONY : Button.cpp.obj
+
+Button.i: Button.cpp.i
+.PHONY : Button.i
+
+# target to preprocess a source file
+Button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Button.cpp.i
+.PHONY : Button.cpp.i
+
+Button.s: Button.cpp.s
+.PHONY : Button.s
+
+# target to generate assembly for a file
+Button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sfml.dir\build.make CMakeFiles/sfml.dir/Button.cpp.s
+.PHONY : Button.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -161,6 +185,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... sfml
+	@echo ... Button.obj
+	@echo ... Button.i
+	@echo ... Button.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
