@@ -6,8 +6,7 @@ set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc")
 
 add_executable(sfml main.cpp Button.cpp Button.hpp Scroll.cpp Scroll.hpp Game.cpp Game.hpp GameState.cpp GameState.hpp)
 
-#set(SFML_ROOT D:/Programmes/SFML)
-set(SFML_ROOT D:/Projects/ClionProjects/sfml/SFML)
+set(SFML_ROOT SFML)
 set(SFML_STATIC_LIBRARIES TRUE)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")

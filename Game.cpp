@@ -17,7 +17,7 @@ void Game::play()
   RenderWindow window(sf::VideoMode(800, 600), "Joy Casino!", Style::Titlebar);
 
   Texture background;
-  background.loadFromFile("../src/cas.jpg");
+  background.loadFromFile("../src/cas1.jpg");
   Sprite back;
   back.setTexture(background);
   back.setOrigin(300, 100);
@@ -40,19 +40,19 @@ void Game::play()
     {
       for (auto &item: scrolls)
       {
-        item.setTextureRect(item.getPositionInRect());
-      }
-      for (auto &item: scrolls)
-      {
         item.toScroll(time.asMilliseconds());
       }
+      Time delay = milliseconds(3);
+      sf::sleep(delay);
     }
 
     // Keyboards
     Event event{};
     while (window.pollEvent(event))
     {
-      if (event.type == Event::Closed || Keyboard::isKeyPressed(Keyboard::Escape)) window.close();
+      if (event.type == Event::Closed ||
+          (Keyboard::isKeyPressed(Keyboard::Escape)) && gameState_.getState() == GameState::State::Waiting)
+        window.close();
       if ((buttons[0].isClicked(window) || Keyboard::isKeyPressed(Keyboard::E)) &&
           gameState_.getState() == GameState::State::Waiting)
       {
@@ -63,9 +63,10 @@ void Game::play()
           gameState_.getState() == GameState::State::Running)
       {
         gameState_.doNext();
-        stopGame(scrolls, isWin);
+        stopGame(window, scrolls, isWin);
       }
-      if ((Keyboard::isKeyPressed(Keyboard::Q) || (Mouse::isButtonPressed(Mouse::Left) && IntRect(270, 350, 230, 68).contains(Mouse::getPosition(window))))
+      if ((Keyboard::isKeyPressed(Keyboard::Q) ||
+           (Mouse::isButtonPressed(Mouse::Left) && IntRect(270, 350, 230, 68).contains(Mouse::getPosition(window))))
           && gameState_.getState() == GameState::State::Exiting)
       {
         isWin = false;
@@ -78,7 +79,10 @@ void Game::play()
     if (time.asSeconds() > SCROLL_TIME && gameState_.getState() == GameState::State::Running)
     {
       gameState_.doNext();
-      stopGame(scrolls, isWin);
+      window.clear();
+      window.draw(back);
+      drawObjects(window, buttons);
+      stopGame(window, scrolls, isWin);
     }
 
     // Display
@@ -129,9 +133,9 @@ void Game::createScrolls(std::vector<Scroll> &vector)
 void Game::createButtons(std::vector<Button> &vector)
 {
   Button *start_button = new Button("button.jpg", 70, 130, 230, 68);
-  start_button->setPosition(500, 100);
+  start_button->setPosition(465, 142);
   Button *stop_button = new Button("button.jpg", 420, 130, 230, 68);
-  stop_button->setPosition(500, 400);
+  stop_button->setPosition(465, 370);
   vector.push_back(*start_button);
   vector.push_back(*stop_button);
 }
@@ -152,12 +156,24 @@ void Game::drawObjects(RenderWindow &window, std::vector<Scroll> &vector)
   }
 }
 
-void Game::stopGame(std::vector<Scroll> &vector, bool &isWin)
+void Game::stopGame(sf::RenderWindow &window, std::vector<Scroll> &vector, bool &isWin)
 {
-  for (auto &item: vector)
+  for (int i = 0; i < vector.size(); i++)
   {
-    item.setPositionInRect(item.getPositionInRect() / 100 * 100);
-    item.setTextureRect(item.getPositionInRect());
+    int tempX = (vector[i].getPositionInRect() / 100 + 1) * 100;
+    while (vector[i].getPositionInRect() < tempX)
+    {
+      vector[i].setPositionInRect(vector[i].getPositionInRect() + 1);
+      vector[i].setTextureRect(vector[i].getPositionInRect());
+      window.draw(vector[i].getSprite());
+      for (int j = i + 1; j < vector.size(); j++)
+      {
+        vector[j].toScroll(1);
+        window.draw(vector[j].getSprite());
+      }
+      window.display();
+      sleep(Time(milliseconds(3)));
+    }
   }
   if (checkWin(vector))
   {
@@ -201,7 +217,6 @@ void Game::showGameResult(sf::RenderWindow &window, bool &isWin)
     text.setPosition(120, 240);
     window.draw(text);
   }
-
 }
 
 Game::Game()

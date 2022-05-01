@@ -15,7 +15,7 @@ public:
   static void createButtons(std::vector<Button> &vector);
   void drawObjects(sf::RenderWindow &window, std::vector<Button> &vector);
   void drawObjects(sf::RenderWindow &window, std::vector<Scroll> &vector);
-  void stopGame(std::vector<Scroll> &vector, bool &isWin);
+  void stopGame(sf::RenderWindow &window, std::vector<Scroll> &vector, bool &isWin);
   void showGameResult(sf::RenderWindow &window, bool &isWin);
 
 private:
