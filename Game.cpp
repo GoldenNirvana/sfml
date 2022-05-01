@@ -17,7 +17,7 @@ void Game::play()
   RenderWindow window(sf::VideoMode(800, 600), "Joy Casino!", Style::Titlebar);
 
   Texture background;
-  background.loadFromFile("../src/cas1.jpg");
+  background.loadFromFile("../textures/cas1.jpg");
   Sprite back;
   back.setTexture(background);
   back.setOrigin(300, 100);
@@ -192,7 +192,7 @@ void Game::showGameResult(sf::RenderWindow &window, bool &isWin)
   text.setStyle(Text::Bold | Text::Underlined);
 
   Texture winBack;
-  winBack.loadFromFile("../src/win.png");
+  winBack.loadFromFile("../textures/win.png");
   Sprite winSprite;
   winSprite.setTexture(winBack);
   winSprite.scale(0.5, 0.5);
