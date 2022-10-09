@@ -1,2 +1,0 @@
-# sfml
-svaikinilya@yandex.ru
